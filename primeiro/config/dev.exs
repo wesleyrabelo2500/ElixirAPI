@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :primeiro, Primeiro.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "JEDIelixir",
   hostname: "localhost",
   database: "primeiro_dev",
   stacktrace: true,

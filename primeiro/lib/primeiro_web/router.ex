@@ -18,6 +18,9 @@ defmodule PrimeiroWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    resources "/tarefas", TarefasController
+
   end
 
   # Other scopes may use custom stacks.

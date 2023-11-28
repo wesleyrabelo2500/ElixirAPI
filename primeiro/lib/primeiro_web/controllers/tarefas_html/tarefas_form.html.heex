@@ -2,11 +2,11 @@
   <.error :if={@changeset.action}>
     Oops, something went wrong! Please check the errors below.
   </.error>
-  <.input field={f[:pessoa]} type="text" label="Pessoa" />
-  <.input field={f[:afazer]} type="text" label="Afazer" />
+  <.input field={f[:pessoa]} type="text" label="Pessoa Resposável" />
+  <.input field={f[:afazer]} type="text" label="Descrição da Tarefa" />
   <.input field={f[:progresso]} type="text" label="Progresso" />
-  <.input field={f[:comentarios]} type="text" label="Comentarios" />
+  <.input field={f[:comentarios]} type="text" label="Comentários" />
   <:actions>
-    <.button>Save Tarefas</.button>
+    <.button>Salvar Tarefa</.button>
   </:actions>
 </.simple_form>

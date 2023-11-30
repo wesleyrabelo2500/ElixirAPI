@@ -1,30 +1,30 @@
 <.header>
-  Listing Tarefa
+  Lista de Tarefas
   <:actions>
     <.link href={~p"/tarefa/new"}>
-      <.button>New Tarefa</.button>
+      <.button>Nova Tarefa</.button>
     </.link>
   </:actions>
 </.header>
 
 <.table id="tarefa" rows={@tarefa_collection} row_click={&JS.navigate(~p"/tarefa/#{&1}")}>
-  <:col :let={tarefa} label="Afazer"><%= tarefa.afazer %></:col>
-  <:col :let={tarefa} label="Pessoa"><%= tarefa.pessoa %></:col>
-  <:col :let={tarefa} label="Descr"><%= tarefa.descr %></:col>
-  <:col :let={tarefa} label="Praini"><%= tarefa.praini %></:col>
-  <:col :let={tarefa} label="Prafin"><%= tarefa.prafin %></:col>
-  <:col :let={tarefa} label="Progre"><%= tarefa.progre %></:col>
-  <:col :let={tarefa} label="Priorid"><%= tarefa.priorid %></:col>
-  <:col :let={tarefa} label="Coment"><%= tarefa.coment %></:col>
+  <:col :let={tarefa} label="Tarefas"><%= tarefa.afazer %></:col>
+  <:col :let={tarefa} label="Responsável"><%= tarefa.pessoa %></:col>
+  <:col :let={tarefa} label="Descrição"><%= tarefa.descr %></:col>
+  <:col :let={tarefa} label="Data de Inicio"><%= tarefa.praini %></:col>
+  <:col :let={tarefa} label="Data de Entrega"><%= tarefa.prafin %></:col>
+  <:col :let={tarefa} label="Progresso"><%= tarefa.progre %></:col>
+  <:col :let={tarefa} label="Prioridade"><%= tarefa.priorid %></:col>
+  <:col :let={tarefa} label="Comentários"><%= tarefa.coment %></:col>
   <:action :let={tarefa}>
     <div class="sr-only">
-      <.link navigate={~p"/tarefa/#{tarefa}"}>Show</.link>
+      <.link navigate={~p"/tarefa/#{tarefa}"}>Mostrar</.link>
     </div>
-    <.link navigate={~p"/tarefa/#{tarefa}/edit"}>Edit</.link>
+    <.link navigate={~p"/tarefa/#{tarefa}/edit"}>Editar</.link>
   </:action>
   <:action :let={tarefa}>
-    <.link href={~p"/tarefa/#{tarefa}"} method="delete" data-confirm="Are you sure?">
-      Delete
+    <.link href={~p"/tarefa/#{tarefa}"} method="Excluir" data-confirm="Você tem certeza?">
+      Deletar
     </.link>
   </:action>
 </.table>

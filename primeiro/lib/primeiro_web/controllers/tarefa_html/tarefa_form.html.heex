@@ -1,16 +1,16 @@
 <.simple_form :let={f} for={@changeset} action={@action}>
   <.error :if={@changeset.action}>
-    Oops, something went wrong! Please check the errors below.
+    Ops, algo deu errado! Por favor, verifique os erros abaixo.
   </.error>
-  <.input field={f[:afazer]} type="text" label="Afazer" />
-  <.input field={f[:pessoa]} type="text" label="Pessoa" />
-  <.input field={f[:descr]} type="text" label="Descr" />
-  <.input field={f[:praini]} type="date" label="Praini" />
-  <.input field={f[:prafin]} type="date" label="Prafin" />
-  <.input field={f[:progre]} type="text" label="Progre" />
-  <.input field={f[:priorid]} type="text" label="Priorid" />
-  <.input field={f[:coment]} type="text" label="Coment" />
+  <.input field={f[:afazer]} type="text" label="Tarefa" />
+  <.input field={f[:pessoa]} type="text" label="Responsável" />
+  <.input field={f[:descr]} type="text" label="Descrição da Tarefa" />
+  <.input field={f[:praini]} type="date" label="Data de Inicio" />
+  <.input field={f[:prafin]} type="date" label="Data de Entrega" />
+  <.input field={f[:progre]} type="text" label="Progresso" />
+  <.input field={f[:priorid]} type="text" label="Prioridade" />
+  <.input field={f[:coment]} type="text" label="Comentários" />
   <:actions>
-    <.button>Save Tarefa</.button>
+    <.button>Salvar Tarefa</.button>
   </:actions>
 </.simple_form>

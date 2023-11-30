@@ -1,6 +1,6 @@
 <.header>
-  Edit Tarefa <%= @tarefa.id %>
-  <:subtitle>Use this form to manage tarefa records in your database.</:subtitle>
+  Editar Tarefa <%= @tarefa.id %>
+  <:subtitle>Use este formulário para gerenciar registros de tarefas.</:subtitle>
 </.header>
 
 <.tarefa_form changeset={@changeset} action={~p"/tarefa/#{@tarefa}"} />

@@ -1,22 +1,22 @@
 <.header>
   Tarefa <%= @tarefa.id %>
-  <:subtitle>This is a tarefa record from your database.</:subtitle>
+  <:subtitle>Esta é uma entrada de tarefa do seu banco de dados.</:subtitle>
   <:actions>
     <.link href={~p"/tarefa/#{@tarefa}/edit"}>
-      <.button>Edit tarefa</.button>
+      <.button>Editar Tarefa</.button>
     </.link>
   </:actions>
 </.header>
 
 <.list>
-  <:item title="Afazer"><%= @tarefa.afazer %></:item>
-  <:item title="Pessoa"><%= @tarefa.pessoa %></:item>
-  <:item title="Descr"><%= @tarefa.descr %></:item>
-  <:item title="Praini"><%= @tarefa.praini %></:item>
-  <:item title="Prafin"><%= @tarefa.prafin %></:item>
-  <:item title="Progre"><%= @tarefa.progre %></:item>
-  <:item title="Priorid"><%= @tarefa.priorid %></:item>
-  <:item title="Coment"><%= @tarefa.coment %></:item>
+  <:item title="Tarefa"><%= @tarefa.afazer %></:item>
+  <:item title="Responsável"><%= @tarefa.pessoa %></:item>
+  <:item title="Descrição"><%= @tarefa.descr %></:item>
+  <:item title="Data de Inicio"><%= @tarefa.praini %></:item>
+  <:item title="Data de Entrega"><%= @tarefa.prafin %></:item>
+  <:item title="Progresso"><%= @tarefa.progre %></:item>
+  <:item title="Prioridade"><%= @tarefa.priorid %></:item>
+  <:item title="Comentários"><%= @tarefa.coment %></:item>
 </.list>
 
-<.back navigate={~p"/tarefa"}>Back to tarefa</.back>
+<.back navigate={~p"/tarefa"}>Voltar para lista de Tarefas</.back>

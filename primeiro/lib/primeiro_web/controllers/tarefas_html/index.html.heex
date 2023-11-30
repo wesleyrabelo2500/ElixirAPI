@@ -1,26 +1,26 @@
 <.header>
-  Lista de Tarefas
+  Listing Tarefas
   <:actions>
     <.link href={~p"/tarefas/new"}>
-      <.button>Nova Tarefa</.button>
+      <.button>New Tarefas</.button>
     </.link>
   </:actions>
 </.header>
 
 <.table id="tarefas" rows={@tarefas_collection} row_click={&JS.navigate(~p"/tarefas/#{&1}")}>
-  <:col :let={tarefas} label="Responsável"><%= tarefas.pessoa %></:col>
-  <:col :let={tarefas} label="Descrição da Tarefa"><%= tarefas.afazer %></:col>
+  <:col :let={tarefas} label="Pessoa"><%= tarefas.pessoa %></:col>
+  <:col :let={tarefas} label="Afazer"><%= tarefas.afazer %></:col>
   <:col :let={tarefas} label="Progresso"><%= tarefas.progresso %></:col>
-  <:col :let={tarefas} label="Comentários"><%= tarefas.comentarios %></:col>
+  <:col :let={tarefas} label="Comentarios"><%= tarefas.comentarios %></:col>
   <:action :let={tarefas}>
     <div class="sr-only">
-      <.link navigate={~p"/tarefas/#{tarefas}"}>Mostrar</.link>
+      <.link navigate={~p"/tarefas/#{tarefas}"}>Show</.link>
     </div>
-    <.link navigate={~p"/tarefas/#{tarefas}/edit"}>Editar</.link>
+    <.link navigate={~p"/tarefas/#{tarefas}/edit"}>Edit</.link>
   </:action>
   <:action :let={tarefas}>
-    <.link href={~p"/tarefas/#{tarefas}"} method="delete" data-confirm="Você tem certeza?">
-      Deletar
+    <.link href={~p"/tarefas/#{tarefas}"} method="delete" data-confirm="Are you sure?">
+      Delete
     </.link>
   </:action>
 </.table>

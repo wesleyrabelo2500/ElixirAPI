@@ -1,18 +1,18 @@
 <.header>
-  Tarefa <%= @tarefas.id %>
-  <:subtitle>Aqui estão todas as informações sobre sua tarefa!</:subtitle>
+  Tarefas <%= @tarefas.id %>
+  <:subtitle>This is a tarefas record from your database.</:subtitle>
   <:actions>
     <.link href={~p"/tarefas/#{@tarefas}/edit"}>
-      <.button>Editar Tarefa</.button>
+      <.button>Edit tarefas</.button>
     </.link>
   </:actions>
 </.header>
 
 <.list>
-  <:item title="Pessoa Responsável"><%= @tarefas.pessoa %></:item>
-  <:item title="Descrição da Tarefa"><%= @tarefas.afazer %></:item>
+  <:item title="Pessoa"><%= @tarefas.pessoa %></:item>
+  <:item title="Afazer"><%= @tarefas.afazer %></:item>
   <:item title="Progresso"><%= @tarefas.progresso %></:item>
-  <:item title="Comentários"><%= @tarefas.comentarios %></:item>
+  <:item title="Comentarios"><%= @tarefas.comentarios %></:item>
 </.list>
 
-<.back navigate={~p"/tarefas"}>Voltar para lista de tarefas!</.back>
+<.back navigate={~p"/tarefas"}>Back to tarefas</.back>

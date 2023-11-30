@@ -1,0 +1,22 @@
+<.header>
+  Tarefa <%= @tarefa.id %>
+  <:subtitle>This is a tarefa record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/tarefa/#{@tarefa}/edit"}>
+      <.button>Edit tarefa</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Afazer"><%= @tarefa.afazer %></:item>
+  <:item title="Pessoa"><%= @tarefa.pessoa %></:item>
+  <:item title="Descr"><%= @tarefa.descr %></:item>
+  <:item title="Praini"><%= @tarefa.praini %></:item>
+  <:item title="Prafin"><%= @tarefa.prafin %></:item>
+  <:item title="Progre"><%= @tarefa.progre %></:item>
+  <:item title="Priorid"><%= @tarefa.priorid %></:item>
+  <:item title="Coment"><%= @tarefa.coment %></:item>
+</.list>
+
+<.back navigate={~p"/tarefa"}>Back to tarefa</.back>
